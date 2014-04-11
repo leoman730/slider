@@ -1,7 +1,7 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 // bower:scss
-@import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
 .browsehappy {
@@ -91,3 +91,33 @@ body {
         border-bottom: 0;
     }
 }
+
+
+
+.viewport {
+    border: #888 solid 1px;
+    width: 300px;
+    height:300px;
+    margin: 0px auto;
+    // overflow: hidden;
+
+    .inner {
+        width: 10000px;
+        position: relative;
+    }
+
+    .pages {       
+        background-color: #999999;   
+        float: left;     
+        .page {
+            border: #888 solid 1px;
+            width: 300px;
+            height: 300px;
+            float:left;
+        }
+    }
+}
+
+
+
+
