@@ -75,8 +75,6 @@
 
         slider.activePage.addClass('active');
 
-
-
         slider.numPages--;
 
         // console.log(slider.numPages);
