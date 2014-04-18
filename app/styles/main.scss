@@ -4,12 +4,139 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+/* first for IE 4–8 */
+@font-face {
+  font-family: MiloWeb;
+  src: url("../fonts/MiloWeb.eot");
+}
+@font-face {
+  font-family: MiloWeb-Bold;
+  src: url("../fonts/MiloWeb-Bold.eot");
+}
+
+/* then for WOFF-capable browsers */
+@font-face {
+  font-family: MiloWeb;
+  src: url("../fonts/MiloWeb.woff") format("woff");
+}
+@font-face {
+  font-family: MiloWeb-Bold;
+  src: url("../fonts/MiloWeb-Bold.woff") format("woff");
+}
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+@media screen and (min-width: 0px) {
+    body {
+        overflow: scroll;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0;
+        overflow: scroll-y;
+    }
+
+    .viewport {
+        width: 100%;
+        height:100%;
+        margin: 0px auto;
+        overflow: hidden;
+
+        .inner {
+            position: relative;
+            width: 999999999px;
+        }
+
+        .page {
+            float:left;
+            color: red;
+            padding: 2vw;
+            width: 100vw;
+            height: 100vh;
+
+            .header {
+                // border-bottom: 1px solid #969696;
+                height: 15vh;
+                margin-bottom: 5vh;
+                position: relative;
+                .week {
+                    font-family: MiloWeb-Bold, arial, sans-serif;
+                    color: #507c8f;
+                    font-size: 6vh;
+                    text-transform: uppercase;
+                }
+                .date {
+                    font-family: MiloWeb, arial, sans-serif;
+                    color: #535657;
+                    font-size: 3vh;
+                    
+                }
+                .logo {
+                    width: 50vw;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .content_left {
+                width: 100vw;
+
+            }
+
+            .content_right {
+                width: 100vw;
+            }
+
+            .event {
+                margin-bottom: 3vh;
+                .title {
+                    font-family: MiloWeb-Bold, arial, sans-serif;
+                    color: #5B477D;
+                    font-size: 5vw;
+                }
+                .info {
+                    .date {
+                        color: #92A99C;
+                    }
+                    font-family: Georgia, arial, sans-serif;
+                    font-size: 4vw;
+                    color: #535657;
+                }
+            }
+
+
+        }
+    }
+}
+
+
+
 
 
 
 /* Responsive: Portrait tablets and up */
 // @media screen and (min-width: 768px) {
-@media screen and (min-width: 0px) {
+@media screen and (min-width: 768px) {
+
     .container {
         width: 100%;
         height: 100%;
@@ -27,27 +154,78 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
             position: relative;
             width: 999999999px;
         }
-       
+
         .page {
             float:left;
             color: red;
+            padding: 2vw;
             width: 100vw;
             height: 100vh;
-            img {
-                width: 100%;
-                height: 100%;
+
+            .header {
+                border-bottom: 1px solid #969696;
+                height: 10vh;
+                margin-bottom: 5vh;
+                position: relative;
+                .week {
+                    font-family: MiloWeb-Bold, arial, sans-serif;
+                    color: #507c8f;
+                    font-size: 6vw;
+                    text-transform: uppercase;
+                    // line-height: 3vw;
+                    position: absolute;
+                    left: 0vw;
+                    bottom: -2.5vh;
+                }
+                .date {
+                    font-family: MiloWeb, arial, sans-serif;
+                    color: #535657;
+                    font-size: 3vw;
+                    position: absolute;
+                    bottom: -0.5vh;
+                    left: 26vw;
+                    
+                }
+                .logo {
+                    position: absolute;
+                    right: 0px;
+                    bottom: 0.5vh;
+                    width: 17vw;
+                    img {
+                        width: 17vw;
+                    }
+                }
             }
+
+            .content_left {
+                width: 48vw;
+                float: left;
+
+            }
+
+            .content_right {
+                width: 48vw;
+                float: right;
+            }
+
+            .event {
+                height: 10vh;
+                .title {
+                    font-family: MiloWeb-Bold, arial, sans-serif;
+                    color: #5B477D;
+                    font-size: 2vw;
+                    line-height: 2vw;
+                }
+                .info {
+                    font-family: Georgia, arial, sans-serif;
+                    font-size: 1.3vw;
+                    color: #535657;
+                }
+            }
+
+
         }
     }
-
-
-
-
-
 }
-
-
-
-
 
 
