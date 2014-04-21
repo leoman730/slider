@@ -127,7 +127,8 @@
 
         getSlides: function(callback) {
             var slider = this;
-            var request = $.ajax('/templates/slide.html');
+            var request = $.ajax('/assets/js/slider/templates/slide.html');
+
 
             request.done(function(data) {
 
